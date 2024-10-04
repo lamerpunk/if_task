@@ -7,6 +7,7 @@ GTEST_DIR = ./googletest
 GTEST_INCLUDE = -I$(GTEST_DIR)/include
 GTEST_LIB = -L$(GTEST_DIR)/lib -lgtest
 
+
 # Определить исходные файлы и объектные файлы
 SRC = $(wildcard *.cpp)
 OBJ = $(SRC:.cpp=.o)
@@ -40,6 +41,7 @@ $(TEST_EXEC): $(OBJ) $(TEST_OBJ)
 # Запуск тестов
 test: $(TEST_EXEC)
 	./$(TEST_EXEC)
+
 
 # Очистка
 clean:
